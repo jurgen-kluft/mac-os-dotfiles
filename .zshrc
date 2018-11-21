@@ -6,7 +6,7 @@ export ZSH=~/.oh-my-zsh
 
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # Some I like (but I did not try many): robbyrussell, random, clean, agnoster
-ZSH_THEME="agnoster"
+ZSH_THEME="theunraveler"
 
 # My custom configs live in here
 ZSH_CUSTOM=~/dotfiles/zsh

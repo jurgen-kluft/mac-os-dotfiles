@@ -1,31 +1,31 @@
 dotfiles
 ========
 
-This is a very simple .dotfiles repo from a [PHP developer](https://gist.github.com/kevinpapst/24e251a5bf3a01174a231e8eeb13d6cd).
+This is a very simple .dotfiles repo from a [developer]
  
-You can use it by itself, but I use it primarly as a submodule of my [MacOS development setup](https://github.com/kevinpapst/mac-os-setup).
+You can use it by itself, but I use it primarly as a submodule of my [MacOS development setup](https://github.com/jurgen-kluft/mac-os-setup).
 
 ## Installation
 
-Attention: This will overwrite already existing .dotfiles in your home directory:
+Attention: This will overwrite already existing 'mac-os-setup' in your home directory:
 
 ```bash
-git clone https://github.com/kevinpapst/dotfiles.git ~/.dotfiles
-cp ~/.dotfiles/* ~/ 
-source ~/.dotfiles/.bash_profile
+git clone https://github.com/jurgen-kluft/mac-os-dotfiles.git ~/mac-os-dotfiles
+cp ~/mac-os-dotfiles/* ~/ 
+source ~/mac-os-dotfiles/.bash_profile
 ```
 
-To update, change into your local `.dotfiles` repository and then:
+To update, change into your local `mac-os-dotfiles` repository and then:
 
 ```bash
-cd ~/.dotfiles/
+cd ~/mac-os-dotfiles/
 git pull
-cp ~/.dotfiles/* ~/ 
+cp ~/mac-os-dotfiles/* ~/ 
 ```
 
 ## What you need to know
 
-- the directorx `zsh` is not existing in here, but zsh will look there for custom files
+- the directory `zsh` is not existing in here, but zsh will look there for custom files
 
 
 ## Thanks ...
