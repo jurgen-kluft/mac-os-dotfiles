@@ -38,7 +38,7 @@ if [ $(command which rbenv) ]; then
 fi
 
 # finally load all the custom dotfiles
-DOTFILES=( ~/.bash_aliases ~/.bash_functions ~/.bash_local ~/dotfiles/.local )
+DOTFILES=( ~/.bash_aliases ~/.bash_functions ~/.bash_local ~/dotfiles/.local ~/dotfiles/.golang_paths )
 for dotfile in "${DOTFILES[@]}"; do
     [ -r "$dotfile" ] && [ -f "$dotfile" ] && source $dotfile;
 done
