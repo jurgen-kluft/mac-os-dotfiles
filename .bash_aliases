@@ -38,7 +38,8 @@ alias f='open -a Finder ./'
 alias path='echo -e ${PATH//:/\\n}'
 
 # MS-DOS related aliases
-alias cls=clear
+alias cls="clear"
+alias dir="ls -la"
 
 
 # ---------------------------------------------------------------------------------------------------

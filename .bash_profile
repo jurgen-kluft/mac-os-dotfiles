@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Executed once ONLY during a new login shell
 
 # Defaults
@@ -20,7 +22,7 @@ if [ -d /usr/local/lib/python2.7/ ]; then
 fi
 
 # docker won't start without setting the environment information for every new shell
-eval $(docker-machine env)
+# eval $(docker-machine env)
 
 # You may need to adjust your language environment
 # export LC_ALL="de_DE.UTF-8"
@@ -30,7 +32,7 @@ export LANG=de_DE.UTF-8
 export ARCHFLAGS="-arch x86_64"
 
 # set the default user so themes and bash can use it to filter away your username from prompt
-export DEFAULT_USER=`whoami`
+export DEFAULT_USER=$(whoami)
 
 # setup ruby environment if available
 if [ $(command which rbenv) ]; then
@@ -38,9 +40,9 @@ if [ $(command which rbenv) ]; then
 fi
 
 # finally load all the custom dotfiles
-DOTFILES=( ~/.bash_aliases ~/.bash_functions ~/.bash_local ~/dotfiles/.local ~/dotfiles/.golang_paths )
+DOTFILES=( ~/.bash_aliases ~/.bash_functions ~/.bash_local ~/.local ~/.bash_exports )
 for dotfile in "${DOTFILES[@]}"; do
-    [ -r "$dotfile" ] && [ -f "$dotfile" ] && source $dotfile;
+    [ -r "$dotfile" ] && [ -f "$dotfile" ] && source "$dotfile";
 done
 unset dotfile;
 unset DOTFILES;

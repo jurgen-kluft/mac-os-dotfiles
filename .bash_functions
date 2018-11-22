@@ -5,21 +5,37 @@
 # The function were written by talented devs from various .dotfiles packages where the original author is unknown
 #
 
-function f()            { find . -iname "*$1*" ${@:2} }
-function r()            { grep "$1" ${@:2} -R . }
-function mkd()          { echo "Creating $@" && mkdir -p "$@" && cd "$@" }
-function show_my_ip()   { dig +short myip.opendns.com @resolver1.opendns.com }
-function tre()          { tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX; }
-function trash ()       { command mv "$@" ~/.Trash ; }
-function cdfinder()     { cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"; }
-function digga()        { dig +nocmd "$1" any +multiline +noall +answer; }
+function f() { 
+	find . -iname "*$1*" "${@:2}" 
+}
+function r() {
+	grep "$1" "${@:2}" -R . 
+}
+function mkd() {
+	echo "Creating $*" && mkdir -p "$@" && cd "$@" 
+}
+function show_my_ip() {
+	dig +short myip.opendns.com @resolver1.opendns.com 
+}
+function tre() { 
+	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX; 
+}
+function trash () { 
+	command mv "$@" ~/.Trash ; 
+}
+function cdfinder() { 
+	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"; 
+}
+function digga() { 
+	dig +nocmd "$1" any +multiline +noall +answer; 
+}
 
 # Start a PHP server from a directory, optionally specifying the port
 function phpserver() {
     local port="${1:-4000}"
     local file="${2}"
     sleep 1 && open "http://127.0.0.1:${port}/" &
-    php -S "0.0.0.0:${port}" -ddisplay_errors=0 ${file}
+    php -S "0.0.0.0:${port}" -ddisplay_errors=0 "${file}"
 }
 
 # Determine size of a file or total size of a directory
@@ -29,7 +45,7 @@ function fs() {
 	else
 		local arg=-sh;
 	fi
-	if [[ -n "$@" ]]; then
+	if [[ -n "$*" ]]; then
 		du $arg -- "$@";
 	else
 		du $arg .[^.]* ./*;
@@ -46,7 +62,8 @@ fi;
 
 # Create a data URL from a file
 function dataurl() {
-	local mimeType=$(file -b --mime-type "$1");
+	local mimeType
+	mimeType=$(file -b --mime-type "$1");
 	if [[ $mimeType == text/* ]]; then
 		mimeType="${mimeType};charset=utf-8";
 	fi
@@ -80,3 +97,4 @@ function escape() {
 		echo "";
 	fi;
 }
+
