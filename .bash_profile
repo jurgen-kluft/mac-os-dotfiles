@@ -26,7 +26,7 @@ fi
 
 # You may need to adjust your language environment
 # export LC_ALL="de_DE.UTF-8"
-export LANG=de_DE.UTF-8
+export LANG=en_US.UTF-8
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
