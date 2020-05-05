@@ -41,6 +41,8 @@ alias path='echo -e ${PATH//:/\\n}'
 alias cls="clear"
 alias dir="ls -la"
 
+# quick webshare
+alias webshare='python -m SimpleHTTPServer 8000'
 
 # ---------------------------------------------------------------------------------------------------
 # TODO test and integrate the following aliases
