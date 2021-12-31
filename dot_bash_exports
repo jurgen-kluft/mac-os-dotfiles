@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# GoLang
+export GOPATH="$HOME/dev.go"
+export GO111MODULE=off
+export PATH="$PATH:$HOME/sdk/go1.15.11/bin"
+export PATH="$PATH:$HOME/dev.go/bin"
+export PATH="$PATH:$HOME/.local/share/nvim-osx64/bin"
+export HOMEBREW_AUTO_UPDATE_INTERVAL=180d
+export HOMEBREW_AUTO_UPDATE_ASK=y
+

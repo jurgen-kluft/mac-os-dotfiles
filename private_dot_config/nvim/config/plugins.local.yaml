@@ -1,0 +1,5 @@
+- repo: phaazon/hop.nvim
+  if: has('nvim-0.5')
+  on_cmd: Hop
+  on_lua: hop
+  hook_source: lua require('plugins.hop')
