@@ -19,8 +19,8 @@ alias dns-fluh="sudo killall -HUP mDNSResponder"
 # improve default grep command
 alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
 
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+# Activate screen saver (when going AFK)
+alias afk="open -a ScreenSaverEngine.app"
 
 # pipe my public ssh key to the clipboard
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
