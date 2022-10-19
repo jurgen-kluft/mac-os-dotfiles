@@ -11,7 +11,7 @@ ZSH_THEME="spaceship"
 # Default plugins can be found in ~/.oh-my-zsh/plugins/
 # Custom plugins can be added to $ZSH_CUSTOM/plugins/
 # Homebrew plugins needs to be loaded differently, as it uses another place for storage
-plugins=(git colored-man-pages colorize brew zsh-syntax-highlighting)
+plugins=(git colored-man-pages colorize brew )
 
 # some more options you can fiddle around with:
 # CASE_SENSITIVE="true"
@@ -43,6 +43,10 @@ source ~/.bash_profile
 # load the oh-my-zsh environment
 source $ZSH/oh-my-zsh.sh
 
-
+eval "$(jump shell zsh)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+
+source $HOME/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
