@@ -23,6 +23,14 @@ plugins=(git zsh-autosuggestions colored-man-pages colorize brew web-search)
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="dd.mm.yyyy"
 
+# PATH
+# append
+# path+=('~/.emacs.d/bin')
+# or prepend
+# path=('/home/david/pear/bin' $path)
+# export to sub-processes (make it inherited by child processes)
+# export PATH
+
 # I know that oh-my-zsh doesn't like that, but I am not going to keep all settings in multiple files.
 # For now lets live with that solution, maybe I am going to switch to .zshrc completely, but until then just make
 # sure that ~/bash_profile is compatible with zsh
@@ -36,3 +44,7 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 source $HOME/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi

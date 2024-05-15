@@ -104,5 +104,3 @@ config push
 ## Thanks ...
 
 * https://www.atlassian.com/git/tutorials/dotfiles
-
-
