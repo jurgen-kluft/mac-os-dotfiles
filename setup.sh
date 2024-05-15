@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-git clone --bare https://bitbucket.org/durdn/cfg.git $HOME/.mac-os-dotfiles
+git clone --bare https://github.com/jurgen-kluft/mac-os-dotfiles $HOME/.dotfiles
 function config {
    /opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }
-mkdir -p .config-backup
+mkdir -p .dotfiles-backup
 config checkout
 if [ $? = 0 ]; then
   echo "Checked out config.";
