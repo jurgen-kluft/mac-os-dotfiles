@@ -1,20 +1,20 @@
 dotfiles
 ========
 
-This is a very simple .dotfiles repo from a [developer]
+This is a very simple .dotfiles repo that doesn't use any external except of course `git`.
  
-You can use it by itself, but I use it primarly as a submodule of my [MacOS development setup](https://github.com/jurgen-kluft/mac-os-setup).
+You can use it by itself, but I use it primarly in combo with my [MacOS development setup](https://github.com/jurgen-kluft/mac-os-setup).
 
 ## Overview
 
 ```bash
-git init --bare $HOME/.mac-os-dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.mac-os-dotfiles/ --work-tree=$HOME'
+git init --bare $HOME/.dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
-echo "alias config='/usr/bin/git --git-dir=$HOME/.mac-os-dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
 ```
 
-* The first line creates a folder ~/.cfg which is a Git bare repository that will track our files.
+* The first line creates a folder ~/.dotfiles which is a Git bare repository that will track our files.
 * Then we create an alias config which we will use instead of the regular git when we want to interact with our configuration repository.
 * We set a flag - local to the repository - to hide files we are not explicitly tracking yet. This is so that when you type config status and other commands later, files you are not interested in tracking will not show up as untracked.
 * Also you can add the alias definition by hand to your .bashrc or use the the fourth line provided for convenience.
@@ -38,22 +38,22 @@ f you already store your configuration/dotfiles in a Git repository, on a new sy
 * Prior to the installation make sure you have committed the alias to your 
 `.bashrc` or `.zsh`:
 ```bash
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
 * And that your source repository ignores the folder where you'll clone it, so that you don't create weird recursion problems:
 ```bash
-echo ".cfg" >> .gitignore
+echo ".dotfiles" >> .gitignore
 ```
 
 * Now clone your dotfiles into a bare repository in a "dot" folder of your `$HOME`:
 ```bash
-git clone --bare <git-repo-url> $HOME/.cfg
+git clone --bare <git-repo-url> $HOME/.dotfiles
 ```
 
 * Define the alias in the current shell scope:
 ```bash
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
 * Checkout the actual content from the bare repository to your `$HOME`:
