@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# GoLang
+# ~/.go
+export GOROOT="$HOME/.go"
+export GOPATH="$HOME/dev.go"
+export GOPROXY=https://goproxy.cn
+export GO111MODULE=auto
+export PATH="$PATH:$HOME/sdk/go/bin"
+export PATH="$PATH:$HOME/dev.go/bin"
+export PATH="$PATH:$HOME/.local/share/nvim-osx64/bin"
+export PATH="$PATH:$HOME/.local/bin"
+
+# Homebrew
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_AUTO_UPDATE_INTERVAL=180d
