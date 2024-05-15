@@ -2,6 +2,7 @@
 
 # GoLang
 export GOPATH="$HOME/dev.go"
+export GOROOT="$HOME/sdk/go"
 export GOPROXY=https://goproxy.cn
 export GO111MODULE=auto
 export PATH="$PATH:$HOME/sdk/go/bin"
