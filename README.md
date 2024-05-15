@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-This is a very simple .dotfiles repo that doesn't use any external except of course `git`.
+This is a very simple .dotfiles repo that doesn't use any external tool except of course `git`.
  
 You can use it by itself, but I use it primarly in combo with my [MacOS development setup](https://github.com/jurgen-kluft/mac-os-setup).
 
