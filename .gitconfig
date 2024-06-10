@@ -3,6 +3,7 @@
 	email = jurgen.kluft@gmail.com
 [core]
   editor = code --wait --new-window
+	autocrlf = input
 [diff]
   tool = vscode
   colorMoved = default

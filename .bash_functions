@@ -29,6 +29,9 @@ function cdfinder() {
 function digga() { 
 	dig +nocmd "$1" any +multiline +noall +answer; 
 }
+function pwgen() {
+	openssl rand -base64 24 | pbcopy
+}
 
 # Start a PHP server from a directory, optionally specifying the port
 function phpserver() {
