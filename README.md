@@ -9,13 +9,14 @@ You can use it by itself, but I use it primarly in combo with my [MacOS developm
 
 ```bash
 git init --bare $HOME/.dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
-echo "alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias config='lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
 ```
 
 * The first line creates a folder ~/.dotfiles which is a Git bare repository that will track our files.
 * Then we create an alias config which we will use instead of the regular git when we want to interact with our configuration repository.
+* We use `lazygit` instead of vanilla `git` because, well if you don't know you are missing out seriously.
 * We set a flag - local to the repository - to hide files we are not explicitly tracking yet. This is so that when you type config status and other commands later, files you are not interested in tracking will not show up as untracked.
 * Also you can add the alias definition by hand to your .bashrc or use the the fourth line provided for convenience.
 
